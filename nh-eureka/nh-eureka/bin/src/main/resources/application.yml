@@ -1,0 +1,29 @@
+server:
+  port: 16000
+
+eureka:
+
+  server:
+    eviction-interval-timer-in-ms: 500
+  instance:
+    lease-expiration-duration-in-seconds: 2
+    lease-renewal-interval-in-seconds: 1
+    hostname: localhost
+  client: 
+    register-with-eureka: false
+    fetch-registry: false
+    service-url: 
+      defaultZone: http://127.0.0.1:16000/eureka/
+    
+spring:
+  application:
+    name: ums.eureka.server
+logging:
+  level: 
+    root: OFF
+    web: error
+    org: 
+      hibernate: ERROR
+      springframework: OFF
+        
+   
